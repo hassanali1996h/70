@@ -1,0 +1,59 @@
+
+<div style="margin: 20px; text-align: center;">
+</div>
+<div id="result" style="margin-top: 20px;"></div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<script src="surahs_full.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التحليل الرقمي القرآني</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#2e7d32" />
+  <!-- مكتبة Tailwind للتصميم -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- خط Cairo من جوجل -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- مكتبة PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- مكتبة Cropper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .dark-mode textarea,
+    .dark-mode input,
+    .dark-mode button {
+      background-color: #1e1e1e !important;
+      color: #ffffff !important;
+      border-color: #444 !important;
+    }
+  </style>
+
+<script src="cmudict_full.js"></script>
+
+
+
+
+<div class="mt-4 text-right">
+  <label class="font-semibold">📖 أدخل اسم أو رقم السورة:</label><br>
+  <input id="surahInput" type="text" class="border p-2 rounded mt-1 w-64" placeholder="مثل: البقرة أو 2">
+  <button onclick="loadSurah()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded ml-2">عرض السورة</button>
+</div>
+
+
+
+</body>
+</html>
