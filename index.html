@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التحليل الرقمي القرآني</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6 text-gray-800">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h1 class="text-2xl font-bold text-center mb-4 text-green-700">أداة التحليل الرقمي القرآني</h1>
+    <div class="flex flex-col space-y-4">
+      <input id="surah-input" type="text" placeholder="اكتب رقم أو اسم السورة"
+             class="border border-gray-300 p-3 rounded w-full text-right" />
+      <button id="display-btn" class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">
+        عرض السورة
+      </button>
+      <div id="result" class="mt-6 text-right"></div>
+    </div>
+  </div>
+
+  <script src="surahs_full.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
